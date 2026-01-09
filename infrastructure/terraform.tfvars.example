@@ -1,0 +1,35 @@
+# =============================================================================
+# Zava Capacity Planner - Terraform Variables
+# =============================================================================
+# Copy this file to terraform.tfvars and fill in your values
+
+# Your Azure subscription ID
+subscription_id = "00000000-0000-0000-0000-000000000000"
+
+# Azure region (West US has GPT-5-mini availability)
+location = "westus"
+
+# Environment name
+environment = "demo"
+
+# PostgreSQL admin credentials
+# Note: With Managed Identity enabled, password is only used for initial setup
+# and as a fallback. Container Apps will use token-based authentication.
+postgres_admin_username = "zava_admin"
+postgres_admin_password = "YourSecurePassword123!"  # Change this!
+
+# API Management publisher email
+apim_publisher_email = "your-email@example.com"
+
+# =============================================================================
+# Authentication Notes
+# =============================================================================
+# This deployment uses Azure AD Managed Identity for PostgreSQL authentication.
+#
+# After terraform apply:
+# 1. Container Apps have System-Assigned Managed Identity enabled
+# 2. PostgreSQL has Microsoft Entra authentication enabled
+# 3. Run data/create_managed_identity_user.sql to create database roles
+#
+# The password above is kept as a fallback and for initial database seeding.
+# =============================================================================

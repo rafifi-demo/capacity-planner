@@ -1,0 +1,31 @@
+# Azure AI Foundry V1 (Classic) - Microsoft Agent Framework
+azure-identity>=1.15.0
+azure-ai-projects>=1.0.0b1
+agent-framework-azure-ai>=1.0.0b260107
+
+# FastAPI and Web
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+websockets>=12.0
+python-multipart>=0.0.6
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Database
+asyncpg>=0.29.0
+sqlalchemy[asyncio]>=2.0.25
+
+# MCP Server
+mcp>=1.0.0
+
+# OpenTelemetry
+opentelemetry-api>=1.22.0
+opentelemetry-sdk>=1.22.0
+opentelemetry-instrumentation-fastapi>=0.43b0
+opentelemetry-instrumentation-asyncpg>=0.43b0
+azure-monitor-opentelemetry-exporter>=1.0.0b21
+
+# Utilities
+python-dotenv>=1.0.0
+httpx>=0.26.0
+python-dateutil>=2.8.2
